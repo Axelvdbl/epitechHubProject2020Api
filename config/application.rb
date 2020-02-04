@@ -7,12 +7,20 @@ require 'rails/all'
 Bundler.require(*Rails.groups)
 
 module EpitechHubProject2020Api
-  class Application < Rails::Application
-    # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 5.1
 
-    # Settings in config/environments/* take precedence over those specified here.
-    # Application configuration should go into files in config/initializers
-    # -- all .rb files in that directory are automatically loaded.
+  class Application < Rails::Application
+
+    config.middleware.insert_before 0, Rack::Cors do
+    allow do
+      origins '*'
+      resource '*',
+      :headers => :any,
+      :expose  => ['access-token', 'expiry', 'token-type', 'uid', 'client'],
+      :methods => [:get, :post, :put, :delete, :destroy, :options]
+
+    end
   end
+
+  end
+
 end
