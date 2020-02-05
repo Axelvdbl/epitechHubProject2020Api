@@ -12,7 +12,8 @@ class User < ActiveRecord::Base
 			firstname: self.firstname,
 			lastname: self.lastname,
 			email: self.email,
-			phone_number: self.phone_number
+			section: self.section,
+			birthday_date: self.birthday_date
 		}
 	end
 

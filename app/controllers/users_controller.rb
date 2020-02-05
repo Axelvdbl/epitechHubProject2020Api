@@ -49,7 +49,9 @@ class UsersController < BaseController
 			:email,
 			:firstname,
 			:lastname,
-			:phone_number
+			:phone_number,
+			:section,
+			:birthday_date
 		)
 	end
 
