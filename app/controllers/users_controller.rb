@@ -51,7 +51,8 @@ class UsersController < BaseController
 			:lastname,
 			:phone_number,
 			:section,
-			:birthday_date
+			:birthday_date,
+			:profile_picture
 		)
 	end
 

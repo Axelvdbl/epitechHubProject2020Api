@@ -13,7 +13,8 @@ class User < ActiveRecord::Base
 			lastname: self.lastname,
 			email: self.email,
 			section: self.section,
-			birthday_date: self.birthday_date
+			birthday_date: self.birthday_date,
+			profile_picture: self.profile_picture
 		}
 	end
 
