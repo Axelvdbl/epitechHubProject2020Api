@@ -17,7 +17,7 @@ class UsersController < BaseController
 		render(
 			json: @user.render_api,
 			status: 201,
-			location: api_v3_user_path(@user.id)
+			location: user_path(@user.id)
 		)
 	end
 
@@ -27,7 +27,7 @@ class UsersController < BaseController
 		render(
 			json: @user.render_api,
 			status: 201,
-			location: api_v3_user_path(@user.id)
+			location: user_path(@user.id)
 		)
 	end
 
@@ -38,7 +38,7 @@ class UsersController < BaseController
 		render(
 			json: @user.render_api,
 			status: 201,
-			location: api_v3_user_path(@user.id)
+			location: user_path(@user.id)
 		)
 	end
 
